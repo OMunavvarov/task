@@ -19,7 +19,7 @@ class _HomePageState extends State<HomePage> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const Text("Today's productions",
-                  style: TextStyle(fontSize: 24,fontWeight: FontWeight.w600),),
+                  style: TextStyle(fontSize: 20,fontWeight: FontWeight.w600),),
                const SizedBox(height: 12,),
                production1(),
                const SizedBox(height: 10,),
@@ -28,13 +28,14 @@ class _HomePageState extends State<HomePage> {
                threeCard(),
                 const SizedBox(height: 24,),
                 const Text("My job offers",
-                  style: TextStyle(fontSize: 24,fontWeight: FontWeight.w600),),
+                  style: TextStyle(fontSize: 20,fontWeight: FontWeight.w600),),
                 const SizedBox(height: 10,),
-                Container(
-                  child: Column(
-
-                  ),
-                )
+                offers(),
+                const SizedBox(height: 30,),
+                const Text("Starred posts",
+                  style: TextStyle(fontSize: 20,fontWeight: FontWeight.w600),),
+                const SizedBox(height: 10,),
+                posts()
               ],
             )
           ],
@@ -193,6 +194,141 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
         ],
+      ),
+    );
+  }
+  Widget offers(){
+    return Column(
+      children: [
+        Container(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(10),
+            color: const Color(0xffF0F2F5),
+
+          ),
+          child: Padding(
+            padding: const EdgeInsets.all(12.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                  children: [
+                    Text("Boom operator",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w700),),
+                    SizedBox(width:170 ,),
+                    Text("Jun 12,2021",style: TextStyle(fontSize: 10,color: Color(0xff656565),fontWeight: FontWeight.bold),),
+                  ],
+                ),
+                const SizedBox(height: 5,),
+                const Divider(
+                  height: 12,
+                  thickness: 2,
+                  color: Colors.white,
+                ),
+                const SizedBox(height: 5,),
+                const Text('Masterchef',style: TextStyle(fontSize: 14,fontWeight: FontWeight.w600),),
+                const SizedBox(height: 5,),
+                Row(
+                  children: [
+                    const Text('Jan 14,2022-Feb 23, 2022',style: TextStyle(fontSize: 10,color: Color(0xff656565),fontWeight: FontWeight.bold),),
+                    SizedBox(width: 182,),
+                    const Text('4 days',style: TextStyle(fontSize: 10,color: Color(0xff656565),fontWeight: FontWeight.bold),),
+                  ],
+                )
+
+
+              ],
+
+            ),
+          ),
+        ),
+        const SizedBox(height: 15,),
+        Container(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(10),
+            color: const Color(0xffF0F2F5),
+
+          ),
+          child: Padding(
+            padding: const EdgeInsets.all(12.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                  children: [
+                    Text("Boom operator",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w700),),
+                    SizedBox(width:170 ,),
+                    Text("Jun 12,2021",style: TextStyle(fontSize: 10,color: Color(0xff656565),fontWeight: FontWeight.bold),),
+                  ],
+                ),
+                const SizedBox(height: 5,),
+                const Divider(
+                  height: 12,
+                  thickness: 2,
+                  color: Colors.white,
+                ),
+                const SizedBox(height: 5,),
+                const Text('Masterchef',style: TextStyle(fontSize: 14,fontWeight: FontWeight.w600),),
+                const SizedBox(height: 5,),
+                Row(
+                  children: [
+                    const Text('Jan 14,2022-Feb 23, 2022',style: TextStyle(fontSize: 10,color: Color(0xff656565),fontWeight: FontWeight.bold),),
+                    SizedBox(width: 182,),
+                    const Text('4 days',style: TextStyle(fontSize: 10,color: Color(0xff656565),fontWeight: FontWeight.bold),),
+                  ],
+                )
+
+
+              ],
+
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+  Widget posts(){
+    return Container(
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(10),
+        color: const Color(0xffF0F2F5),
+
+      ),
+      child: Padding(
+        padding: const EdgeInsets.all(12.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              children: [
+                Text("Qyre US Production",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w700),),
+                const  SizedBox(width:140 ,),
+                Text("2 days ago",style: TextStyle(fontSize: 10,color: Color(0xff656565),fontWeight: FontWeight.bold),),
+              ],
+            ),
+            const SizedBox(height: 5,),
+            const Divider(
+              height: 12,
+              thickness: 2,
+              color: Colors.white,
+            ),
+            const SizedBox(height: 5,),
+            Row(
+              children: [
+                const Text('Updated priviligies for current',style: TextStyle(fontSize: 14,fontWeight: FontWeight.w600),),
+                const SizedBox(width: 60,),
+                Icon(Icons.menu_outlined,color: Colors.blueGrey,),
+                Icon(Icons.image_outlined,color: Colors.blueGrey),
+                Icon(Icons.push_pin_rounded,color: Colors.blueGrey),
+              ],
+            ),
+            const SizedBox(height:10 ,),
+            const Text('I changed your admin roles to posters.'
+                'With that you cant send out offers.'
+                'Just use the communication tool to get all the features!',
+              style: TextStyle(height:1.5,fontSize: 12,color: Color(0xff656565),fontWeight: FontWeight.bold),),
+          ],
+
+        ),
       ),
     );
   }
